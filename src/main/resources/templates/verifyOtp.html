@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" type="text/css" href="/css/StyleverifyOtp.css">
+</head>
+<div class="container">
+<h2>Please Enter The 5 Digit Pin</h2>
+<form method="post" action="" th:action="@{/verify-otp}">
+    <div th:if="${session.message}" class="container">
+        <div>
+            <span th:text="${session.message}"></span>
+        </div>
+        <th:block th:text="${#session.removeAttribute('message')}"></th:block>
+    </div>
+    <div class="form-group">
+        <input name="otp" required="required" type="number" placeholder="Enter otp" class="form-control" />
+    </div>
+
+    <div class="container">
+        <button>Verify otp</button>
+    </div>
+
+</form>
+</div>
+</html>

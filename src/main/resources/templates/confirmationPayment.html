@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Payment Confirmation</title>
+    <link rel="stylesheet" type="text/css" href="/css/StyleconfirmationPayment.css">
+</head>
+<header>
+    <h1>Card Payment</h1>
+</header>
+<body>
+<div class="card-body px-5">
+<!--    <div th:if="${session.message}" class="container">-->
+<!--        <div>-->
+<!--            <span th:text="${session.message}"></span>-->
+<!--        </div>-->
+<!--        <th:block th:text="${#session.removeAttribute('message')}"></th:block>-->
+<!--    </div>-->
+    <h1 th:text="${message}"></h1>
+    <li class="nav-item active">
+        <a class="nav-link" th:href="@{/myorders}" href="#">My Orders</a>
+    </li>
+
+</div>
+</body>
+</html>

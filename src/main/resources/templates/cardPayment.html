@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Card Payment</title>
+    <link rel="stylesheet" type="text/css" href="/css/StylecardPayment.css">
+</head>
+<body>
+<header>
+    <h1>Card Payment</h1>
+</header>
+<main>
+    <form th:action="@{/paymentconfirmation}" method="post">
+        <label for="cardNumber">Card Number:</label>
+        <input type="text" id="cardNumber" name="cardNumber" maxlength="16" minlength="16" required placeholder="Enter your 16 Digit Card Number.">
+
+        <label for="expirationDate">Expiration Date:</label>
+        <input type="text" id="expirationDate" name="expirationDate" maxlength="5" minlength="5" required placeholder="DD/MM">
+
+        <label for="cvv">CVV:</label>
+        <input type="text" id="cvv" name="cvv" maxlength="3" minlength="3" required placeholder="Enter Your 3 Digit CVV.">
+
+        <label for="cardholderName">Cardholder Name:</label>
+        <input type="text" id="cardholderName" name="cardholderName" required placeholder="Enter Your Name.">
+
+        <button type="submit" name="buttonClicked" >Pay Now</button>
+    </form>
+    <h3>*Please Note, All fields Are Mandatory</h3>
+    <h3>Protected by XYZPay</h3>
+</main>
+<footer>
+    <p>&copy; 2023 Foodieez</p>
+</footer>
+</body>
+</html>
